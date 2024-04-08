@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+:root {
+  --primaryRed: hsl(0, 78%, 62%);
+  --primaryCyan: hsl(180, 62%, 55%);
+  --primaryOrange: hsl(34, 97%, 64%);
+  --primaryBlue: hsl(212, 86%, 64%);
+  --neuVeryDarkBlue: hsl(234, 12%, 34%);
+  --neuGrayishBlue: hsl(229, 6%, 66%);
+  --neuVeryLightGray: hsl(0, 0%, 98%);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px 30px;
+}
+.upper {
+  width: 310px;
+  text-align: center;
+}
+.upper h1 {
+  color: var(--neuVeryDarkBlue);
+  font-size: 25px;
+  font-weight: 200;
+}
+.upper h1 span {
+  color: var(--neuVeryDarkBlue);
+  font-weight: 600;
+}
+.upper p {
+  padding-top: 15px;
+  font-weight: 400;
+  color: var(--neuGrayishBlue);
+}
+.card-content {
+  margin-top: 60px;
+  text-align: center;
+}
+.card {
+  width: 310px;
+  height: 200px;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 0 8px 8px var(--neuGrayishBlue);
+}
+.card h3 {
+  font-weight: 600;
+}
+.card p {
+  color: var(--neuGrayishBlue);
+  padding-top: 10px;
+}
+.card img {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  bottom: 25px;
+  right: 25px;
+}
+.sup {
+  border-top: 4px solid var(--primaryCyan);
+}
+.team {
+  border-top: 4px solid var(--primaryRed);
+}
+.karma {
+  border-top: 4px solid var(--primaryOrange);
+}
+.calc {
+  border-top: 4px solid var(--primaryBlue);
+}
+
+/* media query for mobile L 425px  */
+
+@media screen and (min-width: 425px) {
+  .upper {
+    width: 350px;
+  }
+  .upper h1 {
+    font-size: 28px;
+  }
+  .card {
+    width: 340px;
+  }
+}
+
+/* media query for tablet 768px  */
+
+@media screen and (min-width: 768px) {
+  .upper {
+    width: 450px;
+  }
+  .upper h1 {
+    font-size: 30px;
+  }
+  .card-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 25px;
+  }
+  .card {
+    width: 340px;
+    height: 230px;
+  }
+  .card img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* media query for laptop 1024px  */
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-top: 50px;
+  }
+  .upper {
+    width: 500px;
+  }
+  .upper h1 {
+    font-size: 40px;
+  }
+  .card-content {
+    width: 1000px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .card {
+    width: 310px;
+    height: 210px;
+    position: absolute;
+  }
+  .sup {
+    left: 8px;
+  }
+  .team {
+    top: 10px;
+  }
+  .karma {
+    bottom: 10px;
+  }
+  .calc {
+    right: 8px;
+  }
+}
